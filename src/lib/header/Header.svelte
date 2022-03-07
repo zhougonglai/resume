@@ -4,7 +4,7 @@
 </script>
 
 <header class="flex justify-center">
-	<nav>
+	<nav class="drop-shadow">
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
@@ -15,8 +15,8 @@
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">关于我</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">技能树</a>
+			<li class:active={$page.url.pathname === '/skills'}>
+				<a sveltekit:prefetch href="/skills">技能树</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -33,7 +33,7 @@
 	}
 
 	svg {
-		height: 5rem;
+		height: 3rem;
 		display: block;
 	}
 
@@ -45,7 +45,7 @@
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 5rem;
+		height: 3rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -58,7 +58,7 @@
 		position: relative;
 		height: 100%;
 		&.active::before {
-			--size: 1rem;
+			--size: 0.6rem;
 			content: '';
 			width: 0;
 			height: 0;
