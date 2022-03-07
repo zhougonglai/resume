@@ -1,12 +1,8 @@
 import { api } from './_api';
 
 export const get = async ({ locals }) => {
-	// locals.userid comes from src/hooks.js
 	const response = await api('get', `todos/${locals.userid}`);
-
 	if (response.status === 404) {
-		// user hasn't created a todo list.
-		// start with an empty array
 		return {
 			body: {
 				todos: []
@@ -37,8 +33,6 @@ export const post = async ({ request, locals }) => {
 	return {};
 };
 
-// If the user has JavaScript disabled, the URL will change to
-// include the method override unless we redirect back to /todos
 const redirect = {
 	status: 303,
 	headers: {
