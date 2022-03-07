@@ -64,8 +64,8 @@ body{
 	box-shadow: none, 0 0 1px rgba(0,0,0,0.1);
 	color: var(--gray-10);
 	max-width: 100%;
-	filter: drop-shadow(1px 2px 3px var(--geekblue-3));
-	transform: all 0.2s ease-in-out;
+	filter: drop-shadow(1px 2px 3px var(--geekblue-4));
+	transform: all 0.25s ease-in-out;
 	cursor: pointer;
 	&:hover{
 		filter: drop-shadow(2px 4px 6px var(--geekblue-5));
@@ -150,7 +150,7 @@ body{
 		display: block;
 		font-weight: bold;
 		background-color: transparent;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.25s ease-in-out;
 		&::before{
 			content: '';
 			position: absolute;
@@ -183,7 +183,7 @@ body{
 			padding: 0.5em 0.75em;
 			background-color: transparent;
 			display: block;
-			transform: all 0.2s ease-in-out;
+			transform: all 0.25s ease-in-out;
 			&::before{
 				content: '';
 				position: absolute;
@@ -205,7 +205,7 @@ body{
 		display: block;
 		font-weight: bold;
 		background-color: transparent;
-		transition: all 0.2s ease-in-out;
+		transition: all 0.25s ease-in-out;
 		&::before{
 			content: '';
 			position: absolute;
@@ -237,7 +237,7 @@ body{
 			padding: 0.5em 0.75em;
 			background-color: transparent;
 			display: block;
-			transform: all 0.2s ease-in-out;
+			transform: all 0.25s ease-in-out;
 			&::before{
 				content: '';
 				position: absolute;
