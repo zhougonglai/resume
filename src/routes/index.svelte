@@ -10,7 +10,7 @@
 </svelte:head>
 
 <section
-	class="grid gap-8 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-start"
+	class="grid gap-8 xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:grid-rows-2 xl:grid-flow-col "
 >
 	<div class="card">
 		<div class="card-content px-4 py-8">
