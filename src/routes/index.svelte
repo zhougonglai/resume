@@ -15,9 +15,9 @@
 	<div class="card">
 		<div class="card-content px-4 py-8">
 			<h3 class="card-label">个人信息</h3>
-			<ul class="card-list">
+			<ul class="card-list flex-1">
 				<li>股哥/🚹/1992</li>
-				<li>本科/萌鹿大学计算机系</li>
+				<li>萌鹿大学计算机系</li>
 				<li>工作年限：2015年~至今</li>
 				<li>期望职位：Web前端高级程序员</li>
 				<li>期望薪资：税前月薪15k~20k，特别喜欢的公司可例外</li>
@@ -38,6 +38,9 @@
 	<div class="card">
 		<div class="card-content px-4 py-8">
 			<h3 class="card-label">联系我</h3>
+			<div class="card-cover">
+				<img src="/img/qrcode.jpg" alt="我的二维码" width="200" height="200" />
+			</div>
 
 			<div class="card-action">
 				<button class="card-btn">
@@ -50,6 +53,21 @@
 	<div class="card">
 		<div class="card-content px-4 py-8">
 			<h3 class="card-label">工作经历</h3>
+			<ul class="card-list flex-1 overflow-auto">
+				<li>
+					<img
+						class="object-contain mr-2"
+						src="https://www.lgstatic.com/i/image/M00/1C/83/CgqCHl7gfCSAUhXGAABQxXDG_YU576.png"
+						alt="雷神科技"
+						width="45"
+						height="45"
+					/>
+					<div class="content">
+						<div class="title font-bold">雷神科技有限公司</div>
+						<div class="subtitle text-sm">高级前端工程师</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 
