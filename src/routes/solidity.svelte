@@ -8,60 +8,25 @@
 	let account = '';
 	let loading = false;
 	const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+	const url =
+		'https://eth-mainnet.alchemyapi.io/v2/0ELJSCDzvEcl06rAWZAE-VfiJixjq0hC';
 
 	const checkIfWalletIsConnect = async () => {
-		const { ethereum } = window;
-		if (ethereum) {
-			console.log('metamask is available');
-		} else {
-			console.log('please install metamask');
-		}
-
-		const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-		[account] = accounts;
-		console.log('account', account);
+		const p = await connectWallet();
+		console.log(p);
 	};
 
 	const connectWallet = async () => {
-		const { ethereum } = window;
-		if (!ethereum) {
-			alert('please install metamask');
-			return false;
-		}
-
-		const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-		[account] = accounts;
-		console.log('account', account);
+		const provider = new ethers.providers.JsonRpcProvider(url);
+		return provider;
 	};
 
-	const counterAdd = async () => {
-		const { ethereum } = window;
-		if (ethereum) {
-			const provider = new ethers.providers.Web3Provider(ethereum);
-			const signer = provider.getSigner();
-			const contract = new ethers.Contract(address, abi.abi, signer);
-			loading = true;
-			const tx = await contract.add();
-			console.log(tx);
-			await tx.wait();
-			loading = false;
-			await getCounts();
-		}
-	};
+	const counterAdd = async () => {};
 
-	const getCounts = async () => {
-		const { ethereum } = window;
-		if (ethereum) {
-			const provider = new ethers.providers.Web3Provider(ethereum);
-			const signer = provider.getSigner();
-			const contract = new ethers.Contract(address, abi.abi, signer);
-			point = await contract.getCounts().then(n => n.toNumber());
-			console.log(point);
-		}
-	};
+	const getCounts = async () => {};
 
 	onMount(() => {
-		checkIfWalletIsConnect().then(getCounts);
+		checkIfWalletIsConnect();
 	});
 </script>
 
