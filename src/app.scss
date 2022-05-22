@@ -189,6 +189,7 @@ body{
 			background-color: transparent;
 			display: block;
 			transform: all 0.25s ease-in-out;
+			color: black;
 			&::before{
 				content: '';
 				position: absolute;

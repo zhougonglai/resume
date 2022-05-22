@@ -12,12 +12,12 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a sveltekit:prefetch href="/">个人简介</a>
 			</li>
-			<li class:active={$page.url.pathname === '/about'}>
+			<!-- <li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">关于我</a>
 			</li>
 			<li class:active={$page.url.pathname === '/skills'}>
 				<a sveltekit:prefetch href="/skills">技能树</a>
-			</li>
+			</li> -->
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />

@@ -2,28 +2,42 @@
 	import { Button, ButtonSet, Loading } from 'carbon-components-svelte';
 	import { ethers } from 'ethers';
 	import { onMount } from 'svelte';
-	import abi from '../assets/constant/contracts/counter.json';
+	import Account from '$lib/Account/index.svelte';
+	import NoConnectAccountError from '$lib/Error/NoAccount.svelte';
+	import { checkWallet } from '$lib/utils';
 
 	let point = 0;
 	let account = '';
 	let loading = false;
+	let error;
 	const address = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 	const url =
 		'https://eth-mainnet.alchemyapi.io/v2/0ELJSCDzvEcl06rAWZAE-VfiJixjq0hC';
 
-	const checkIfWalletIsConnect = async () => {
-		const p = await connectWallet();
-		console.log(p);
+	const onAccountChanged = async accounts => {
+		console.log('onAccountChanged', accounts);
+		if (accounts.length) {
+			account = accounts[0];
+		} else {
+			account = '';
+		}
 	};
 
 	const connectWallet = async () => {
-		const provider = new ethers.providers.JsonRpcProvider(url);
-		return provider;
+		const ethereum = await checkWallet();
+		const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+		if (accounts.length) {
+			return (account = accounts[0]);
+		}
+		return new Error('没有链接用户');
 	};
 
-	const counterAdd = async () => {};
-
-	const getCounts = async () => {};
+	const checkIfWalletIsConnect = async () => {
+		const ethereum = await checkWallet();
+		const accounts = await ethereum.request({ method: 'eth_accounts' });
+		account = accounts[0];
+		ethereum.on('accountsChanged', onAccountChanged);
+	};
 
 	onMount(() => {
 		checkIfWalletIsConnect();
@@ -36,26 +50,10 @@
 
 <section class="w-full">
 	{#if account}
-		<h3>
-			👋 Hello!
-			<strong class="text-3xl">
-				{`${account.substring(0, 5)}...${account.substring(
-					account.length - 5
-				)}`}
-			</strong>
-		</h3>
-		<h2>你拥有 {point}</h2>
-		<ButtonSet>
-			<Button on:click={counterAdd} disabled={loading}>
-				{#if loading}
-					<Loading withOverlay={false} small />
-				{:else}
-					加币
-				{/if}
-			</Button>
-			<Button on:click={getCounts} kind="tertiary">更新积分</Button>
-		</ButtonSet>
+		<Account {account} />
+	{:else if error}
+		<NoConnectAccountError {error} />
 	{:else}
-		<Button on:click={checkIfWalletIsConnect}>链接钱包👛</Button>
+		<Button on:click={connectWallet}>链接钱包👛</Button>
 	{/if}
 </section>
