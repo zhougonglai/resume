@@ -27,10 +27,10 @@
 			<h3 class="card-label">个人信息</h3>
 			<ul class="card-list flex-1">
 				<li>周公来/🚹/1992</li>
-				<li />
+				<li>学历: 专科</li>
 				<li>工作年限：2015年~至今</li>
 				<li>期望职位：Web前端高级程序员</li>
-				<li>期望薪资：税前月薪20k，特别喜欢的公司可例外</li>
+				<li>期望薪资：月薪18k，特别喜欢的公司可例外</li>
 				<li>期望城市：武汉, 杭州, 深圳</li>
 			</ul>
 			<div class="card-action">
