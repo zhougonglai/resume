@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	const files = import.meta.globEager('$lib/assets/file/*');
+	const files = import.meta.globEager('../../lib/assets/file/*');
 	const getFile = filename =>
 		files['../../lib/assets/file/' + filename].default;
 
