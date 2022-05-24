@@ -65,10 +65,6 @@
 			]
 		}
 	];
-
-	onMount(() => {
-		console.log('files', files);
-	});
 </script>
 
 <svelte:head>
