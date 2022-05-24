@@ -294,12 +294,14 @@
 								{/if}
 							</div>
 
-							<div class="grid xl:grid-cols-2 sm:grid-cols-1 py-5">
+							<div class="grid xl:grid-cols-2 sm:grid-cols-1 py-5 gap-5">
 								<div class="flex-1">
 									<h5 class="text-lg">技术栈</h5>
-									<ul class="list-disc mt-5 gap-y-2">
+									<ul
+										class="grid grid-cols-1 divide-y divide-gray-300 rounded border border-gray-300 border-solid mt-5"
+									>
 										{#each project.skill as skill}
-											<li class="text-sm leading-6">
+											<li class="text-sm py-2 px-5 border-solid">
 												{skill}
 											</li>
 										{/each}
@@ -307,9 +309,11 @@
 								</div>
 								<div class="flex-1">
 									<h5 class="text-lg">项目责任</h5>
-									<ul class="list-disc mt-5 gap-y-2">
+									<ul
+										class="grid grid-cols-1 divide-y divide-gray-300 rounded border border-gray-300 border-solid mt-5"
+									>
 										{#each project.labels as label}
-											<li class="text-sm leading-6">{label}</li>
+											<li class="text-sm py-2 px-5 border-solid">{label}</li>
 										{/each}
 									</ul>
 								</div>
