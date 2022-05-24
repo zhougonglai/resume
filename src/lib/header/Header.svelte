@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	const files = import.meta.globEager('$lib/assets/file/*');
+	const files = import.meta.globEager('../assets/file/*');
 	const getFile = filename => files['../assets/file/' + filename].default;
 </script>
 
