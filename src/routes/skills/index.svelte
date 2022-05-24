@@ -96,7 +96,7 @@
 						<div class="flex-1 inline-flex px-5 gap-x-2 items-center">
 							{#each s.tag as t}
 								<span
-									class={`py-0 px-2 text-sm bg-${s.color}-500  text-white cursor-pointer`}
+									class={`py-0 px-2 text-sm bg-blue-500 text-white cursor-pointer`}
 									>{t}</span
 								>
 							{/each}
