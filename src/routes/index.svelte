@@ -112,7 +112,7 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label text-lg mb-5">技能清单</h3>
+				<h3 class="card-label text-lg mb-5">职业技能</h3>
 				<ul class="card-list flex flex-col gap-y-2">
 					<li>
 						<img
