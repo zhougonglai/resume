@@ -8,13 +8,12 @@
 	onMount(async () => {
 		const ethereum = await checkWallet();
 		const chainId = await ethereum.request({ method: 'eth_chainId' });
-		console.log('chainId', chainId);
 		ethereum.on('chainChanged', location.reload);
 	});
 </script>
 
 <Header />
 
-<main class="container mx-auto py-8">
+<main class="container mx-auto py-8 relative">
 	<slot />
 </main>
