@@ -1,8 +1,10 @@
 <script>
 	import { page } from '$app/stores';
+	const files = import.meta.globEager('$lib/assets/file/*');
+	const getFile = filename => files['../assets/file/' + filename].default;
 </script>
 
-<header class="flex justify-center">
+<header class="flex justify-center relative">
 	<!-- class="drop-shadow" -->
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -15,14 +17,24 @@
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">关于我</a>
 			</li>
-			<!-- <li class:active={$page.url.pathname === '/skills'}>
+			<li class:active={$page.url.pathname === '/skills'}>
 				<a sveltekit:prefetch href="/skills">技能树</a>
-			</li> -->
+			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
 	</nav>
+
+	<a
+		class="absolute right-5 top-2 flex items-center"
+		href={getFile('resume.pdf')}
+		download="前端开发工程师.周公来.pdf"
+		target="_blank"
+	>
+		下载我的简历
+		<ion-icon name="download" class="text-2xl ml-2" />
+	</a>
 </header>
 
 <style lang="scss">

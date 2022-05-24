@@ -46,7 +46,7 @@
 						target: '微信同名公众号'
 					},
 					time: ['2019.9', '至今'],
-					skill: ['vue2', 'webpack', 'vue-router'],
+					skill: ['vue2', 'webpack', 'vue-router', 'typescript'],
 					labels: ['活动模组', '抽奖组件', '用户中心模块'],
 					desc: '微信运营活动'
 				},
@@ -112,6 +112,17 @@
 					desc: '公司官网'
 				},
 				{
+					title: '兰迪英语-hybrid',
+					link: {
+						type: 'label',
+						target: '已下线'
+					},
+					time: ['2017.10', '2019.3'],
+					skill: ['React-Native'],
+					labels: ['兰迪英语学生端', '混合应用'],
+					desc: '兰迪英语学生业务. 上架应用商店'
+				},
+				{
 					title: 'T-Plus',
 					link: {
 						type: 'label',
@@ -140,16 +151,73 @@
 			time: ['2017.3', '2017.6'],
 			logo: '//www.lgstatic.com/i/image/M00/68/45/CgqKkVgQRMSAIv6nAACTFcrzJ30081.png',
 			tag: [],
-			desc: '在任职期间内负责项目日常运营活动, 客户端版本迭代, 工具研发, 数据分析, 技术调研及落地等工作.',
-			projects: []
+			desc: '',
+			projects: [
+				{
+					title: '5km(WEB)',
+					link: {
+						type: 'label',
+						target: '已下线'
+					},
+					time: ['2017.3', '2017.6'],
+					skill: ['angular.js', 'webpack'],
+					labels: ['官网'],
+					desc: '内容运营'
+				},
+				{
+					title: 'U信',
+					link: {
+						type: 'label',
+						target: '内部项目'
+					},
+					time: ['2017.3', '2017.4'],
+					skill: ['vue2.2', 'webpack'],
+					labels: ['管理系统'],
+					desc: '公司运营文档,接口管理等'
+				}
+			]
 		},
 		{
 			title: '亿富贷科技有限公司',
 			time: ['2015.6', '2017.2'],
 			logo: '//www.lgstatic.com/images/logo_default.png',
-			tag: [],
-			desc: '在任职期间内负责项目日常运营活动, 客户端版本迭代, 工具研发, 数据分析, 技术调研及落地等工作.',
-			projects: []
+			tag: ['P2P金融'],
+			desc: '在任职期间内负责后端.微信公众号.官网.等业务',
+			projects: [
+				{
+					title: '亿富贷APP',
+					link: {
+						type: 'label',
+						target: '已下线'
+					},
+					time: ['2016.1', '2016.6'],
+					skill: ['ionic'],
+					labels: ['混合应用'],
+					desc: '亿富贷APP'
+				},
+				{
+					title: '亿富贷积分商城',
+					link: {
+						type: 'label',
+						target: '已下线'
+					},
+					time: ['2015.9', '2015.12'],
+					skill: ['angular.js'],
+					labels: ['混合应用'],
+					desc: '公司积分兑换业务'
+				},
+				{
+					title: '亿富贷微信公众号',
+					link: {
+						type: 'label',
+						target: '已下线'
+					},
+					time: ['2015.6', '2015.9'],
+					skill: ['ionic', 'java'],
+					labels: ['微信公众号全栈'],
+					desc: '公司微信业务'
+				}
+			]
 		}
 	];
 
@@ -168,32 +236,36 @@
 	<ul class="time-list xl:px-10 lg:px-5 md:px-0">
 		{#each timeList as timer, i}
 			<li class="time-item relative xl:pl-40 md:pl-0 pb-5">
-				<div class="time-item__title flex items-center">
-					<img
-						src={timer.logo}
-						alt={timer.title}
-						class="time-item__logo"
-						width="45"
-						height="45"
-					/>
-					<div class="flex-1 mx-5 text-xl">
-						{timer.title}
+				<div
+					class="sticky top-0 bg-white py-2 mb-5 z-10 border-b border-gray-200 border-solid"
+				>
+					<div class="time-item__title flex items-center">
+						<img
+							src={timer.logo}
+							alt={timer.title}
+							class="time-item__logo"
+							width="45"
+							height="45"
+						/>
+						<div class="flex-1 mx-5 text-xl">
+							{timer.title}
+						</div>
+						<time class="text-sm text-gray-600">
+							{timer.time.join('~')}
+						</time>
 					</div>
-					<time class="text-sm text-gray-600">
-						{timer.time.join('~')}
-					</time>
+					<div class="time-item__tags my-2 flex gap-x-2">
+						{#each timer.tag as tag}
+							<span
+								class="time-item__tag px-2 py-1  border border-solid cursor-pointer
+								border-blue-500 shadow shaodw-blue-300 hover:shaow-xl hover:bg-blue-500 hover:text-white"
+							>
+								{tag}
+							</span>
+						{/each}
+					</div>
+					<p class="py-3">{timer.desc}</p>
 				</div>
-				<div class="time-item__tags my-2 flex gap-x-2">
-					{#each timer.tag as tag}
-						<span
-							class="time-item__tag px-2 py-1  border border-solid cursor-pointer
-							border-blue-500 shadow shaodw-blue-300 hover:shaow-xl hover:bg-blue-500 hover:text-white"
-						>
-							{tag}
-						</span>
-					{/each}
-				</div>
-				<p class="py-3">{timer.desc}</p>
 				<div
 					class="time-item__projects p-5 flex flex-col gap-y-5 shadow-inner shaodw shadow-gray-300 border border-gray-200 border-solid sha-dw rounded"
 				>
@@ -276,7 +348,7 @@
 					width: 1px;
 					background-color: #f2f2f2;
 					left: 67px;
-					top: 3px;
+					top: 11px;
 				}
 			}
 		}

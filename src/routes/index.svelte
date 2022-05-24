@@ -29,7 +29,7 @@
 	>
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">个人信息</h3>
+				<h3 class="card-label text-lg mb-5">个人信息</h3>
 				<ul class="card-list flex-1">
 					<li>周公来/🚹/1992</li>
 					<li>学历: 专科</li>
@@ -52,7 +52,7 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">工作经历</h3>
+				<h3 class="card-label text-lg mb-5">工作经历</h3>
 				<ul class="card-list flex-1 overflow-auto flex flex-col gap-y-2">
 					<li>
 						<img
@@ -112,7 +112,7 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">技能清单</h3>
+				<h3 class="card-label text-lg mb-5">技能清单</h3>
 				<ul class="card-list flex flex-col gap-y-2">
 					<li>
 						<img
@@ -168,7 +168,7 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">联系我</h3>
+				<h3 class="card-label text-lg mb-5">联系我</h3>
 				<div class="card-cover">
 					<img
 						src="/img/qrcode.jpg"
@@ -188,8 +188,8 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">项目经历</h3>
-				<ul class="flex flex-col gap-y-2 mt-5">
+				<h3 class="card-label text-lg mb-5">项目经历</h3>
+				<ul class="flex flex-col gap-y-2 flex-1">
 					<li>管理系统</li>
 					<li>官网</li>
 					<li>Web App</li>
@@ -206,16 +206,13 @@
 
 		<div class="card">
 			<div class="card-content px-4 py-8">
-				<h3 class="card-label">业余技能</h3>
-				<ul class="card-list flex flex-col gap-y-2 mt-5">
+				<h3 class="card-label text-lg mb-5">投资技能</h3>
+				<ul class="card-list flex flex-col gap-y-2 flex-1">
 					<li>
 						<div class="content ml-4">ether.js</div>
 					</li>
 					<li>
 						<div class="content ml-4">Solidity</div>
-					</li>
-					<li>
-						<div class="content">Node.js</div>
 					</li>
 					<li>
 						<div class="content ml-4">Figma</div>
@@ -227,6 +224,11 @@
 						<div class="content ml-4">electron</div>
 					</li>
 				</ul>
+				<div class="card-action">
+					<a class="card-link" href="/skills" sveltekit:prefetch>
+						<span class="content">更多</span>
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
