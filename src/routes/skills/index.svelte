@@ -61,6 +61,16 @@
 					name: 'Python',
 					color: 'blue',
 					tag: ['TensorFlow', 'Keras', 'PyTorch']
+				},
+				{
+					name: '容器',
+					color: 'blue',
+					tag: ['Docker', 'Nginx', 'Node.js']
+				},
+				{
+					name: 'Server',
+					color: 'blue',
+					tag: ['GraphQL', 'Apollo', 'Nest.js']
 				}
 			]
 		}
