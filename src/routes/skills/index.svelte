@@ -34,7 +34,7 @@
 				{
 					name: '技术栈更新',
 					color: 'blue',
-					tag: ['Pinial', 'viss', 'vite-ssr', 'Tauri']
+					tag: ['Pinia', 'viss', 'vite-ssr', 'Tauri']
 				},
 				{
 					name: 'Web3',
