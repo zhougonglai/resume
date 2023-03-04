@@ -14,17 +14,38 @@
 			title: '雷神科技有限公司',
 			time: ['2019.06', '至今'],
 			logo: '//www.lgstatic.com/i/image/M00/1C/83/CgqCHl7gfCSAUhXGAABQxXDG_YU576.png',
-			tag: ['工具', '客户端', '活动'],
+			tag: ['工具研发', '客户端', '活动'],
 			desc: '在任职期间内负责项目日常运营活动, 客户端版本迭代, 工具研发, 数据分析, 技术调研及落地等工作.',
 			projects: [
+				{
+					title: 'NN互娱-NN(内测中)',
+					link: {
+						type: 'link',
+						target: 'https://www.nn.com'
+					},
+					time: ['2022.7', '至今'],
+					skill: [
+						'pnpm',
+						'electron',
+						'vue3',
+						'vueUse',
+						'VueMacros',
+						'pinia',
+						'vite2',
+						'typescript',
+						'...'
+					],
+					labels: ['客户端', 'IM即时通信', 'RTC语音通话', 'Web+'],
+					desc: '公司新设立部门,拓展企业业务,主要负责项目技术选型,技术规划.主轴开发'
+				},
 				{
 					title: '雷神加速器-客户端',
 					link: {
 						type: 'link',
 						target: 'https://www.leigod.com/'
 					},
-					time: ['2019.9', '至今'],
-					skill: ['vue2', 'vue-cli', 'vue-router', 'vuex'],
+					time: ['2019.9', '2022.7'],
+					skill: ['vue2', 'vue-cli', 'vue-router', 'vuex', 'electron'],
 					labels: ['活动业务', '消费支付业务', '用户模块'],
 					desc: '公司最大现金流项目'
 				},

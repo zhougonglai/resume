@@ -115,12 +115,21 @@
 				<h3 class="card-label text-lg mb-5">职业技能</h3>
 				<ul class="card-list flex flex-col gap-y-2">
 					<li>
-						<img
+						<!-- <img
 							src="//cn.vuejs.org/images/logo.svg"
 							width="45"
 							height="45"
 							alt="vuejs"
-						/>
+						/> -->
+						<svg class="logo" viewBox="0 0 128 128" width="45" height="45"
+							><path
+								fill="#42b883"
+								d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+							/><path
+								fill="#35495e"
+								d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
+							/></svg
+						>
 						<div class="content ml-4">
 							<div class="title font-bold">Vue2/Vue3</div>
 							<div class="subtitle text-sm">全家桶/Nuxt2/Nuxt3</div>
